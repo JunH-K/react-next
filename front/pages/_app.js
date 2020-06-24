@@ -1,5 +1,6 @@
 import React from 'react'; //next 는 import 안해도됨
 import PropTypes from 'prop-types';
+import Head from 'next/head';
 import 'antd/dist/antd.css';
 
 /* pages 컴포넌트들의 공통 요소 페이지*/
@@ -11,7 +12,15 @@ import 'antd/dist/antd.css';
  * @constructor
  */
 const App = ({ Component }) => {
-  return <Component />;
+  return (
+    <>
+      <Head>
+        <meta charSet="utf-8" />
+        <title>NodeBird</title>
+      </Head>
+      <Component />
+    </>
+  );
 };
 
 App.propTypes = {
