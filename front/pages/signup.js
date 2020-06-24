@@ -1,11 +1,17 @@
 import React from 'react';
+import Head from 'next/head'
 import AppLayout from '../components/AppLayout';
 
 const Signup = () => {
   return (
+    <>
+      <Head>
+        <title>회원가입</title>
+      </Head>
     <AppLayout>
-      <div>Signup page</div>
+      Signup page
     </AppLayout>
+    </>
   );
 };
 
