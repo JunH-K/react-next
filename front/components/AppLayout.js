@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Link from 'next/link';
-import { Menu, Input } from 'antd';
+import { Menu, Input, Row, Col } from 'antd';
 
 const AppLayout = ({ children }) => {
   return (
@@ -18,7 +18,24 @@ const AppLayout = ({ children }) => {
           <Link href="/signup">회원가입</Link>
         </Menu.Item>
       </Menu>
-      {children}
+      <Row gutter={8}>
+        {/*컬럼간 간격*/}
+        <Col xs={24} md={6}>
+          왼쪽
+        </Col>
+        <Col xs={24} md={12}>
+          {children}
+        </Col>
+        <Col xs={24} md={6}>
+          <a
+            href="https://www.naver.com"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            Naver
+          </a>
+        </Col>
+      </Row>
     </div>
   );
 };
