@@ -8,9 +8,7 @@ const Profile = () => {
       <Head>
         <title>내 프로필</title>
       </Head>
-    <AppLayout>
-      Profile page
-    </AppLayout>
+      <AppLayout>Profile page</AppLayout>
     </>
   );
 };
