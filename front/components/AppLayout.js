@@ -29,7 +29,11 @@ const AppLayout = ({ children }) => {
       <Row gutter={8}>
         {/*컬럼간 간격*/}
         <Col xs={24} md={6}>
-          {isLoggedIn ? <UserProfile /> : <LoginForm />}
+          {isLoggedIn ? (
+            <UserProfile setIsLoggedIn={setIsLoggedIn} />
+          ) : (
+            <LoginForm setIsLoggedIn={setIsLoggedIn} />
+          )}
         </Col>
         <Col xs={24} md={12}>
           {children}
